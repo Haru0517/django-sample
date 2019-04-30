@@ -1,10 +1,12 @@
 # ベースイメージ
 FROM python:3.7
 
+ENV PYTHONUNBUFFERED 1
+
 # イメージのメタデータ
 LABEL version="1.0"
 LABEL maintainer="Yuto Chikazawa <minet6759@gmail.com>"
-LABEL description="This is a python-docker-sample."
+LABEL description="This is a django-sample."
 
 # RUN: docker buildするときに実行される
 RUN echo "now building..."
