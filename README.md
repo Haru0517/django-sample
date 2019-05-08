@@ -47,3 +47,17 @@ __polls/models.py__を編集．
 **polls/templates/polls/xxx.html**：views.pyで読み込むテンプレート．
 - `<a href="{% url 'detail' question.id %}">`でURL変更に柔軟に．
 - `app_name`を設定すれば，名前空間を定義できる．
+
+
+
+## Tutorial 4
+フォームの作成
+- **--/polls/detail.html**：フォーム作成．
+- **polls/views.py: vote()**：入力を受け取って結果を保存してresultを表示．
+- **polls/views.py: result()**：指定されたidのQuestionを取得してresult.htmlを表示．
+- **--/polls/result.html**：投票数表示．
+- http://0:8000/polls/1/ にアクセス．
+
+汎用ビューを使う
+- **polls/urls.py**：汎用ビューの書き方に変更．
+- **polls/views.py**：IndexView, DetailView, ResultsViewを作成．
